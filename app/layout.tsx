@@ -4,6 +4,7 @@ import "./globals.css";
 import SocialsLink from "./components/SocialsLink";
 import NavBar from "./components/NavBar";
 import Providers from "./providers/ThemeProvider";
+import MobileNav from "./components/MobileNav";
 
 const bricolageGrotesque = Bricolage_Grotesque({ weight: ["200", "300", "400", "500", "600", "700", "800"], subsets: ["latin"] })
 
@@ -21,7 +22,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${bricolageGrotesque.className} h-screen`}>
         <Providers>
-          <main className="relative flex justify-center bg-[#F5F5F5] dark:bg-[#1E1E1E] w-full h-full">
+          <main className="relative flex justify-center bg-[#F5F5F5] dark:bg-[#1E1E1E] w-full h-full transition-all ease-in duration-700">
+            <MobileNav />
             <SocialsLink />
             <NavBar />
             {children}
