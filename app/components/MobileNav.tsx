@@ -30,7 +30,7 @@ function MobileNav() {
         <div className="fixed inset-0 flex justify-center items-end px-4 py-6 md:hidden">
             {!showNavBar && (
                 <button
-                    className="px-6 py-3 bg-white text-black border border-lightGray rounded-full shadow dark:bg-black-500 dark:text-lightGray dark:border-[#2B303B]"
+                    className="px-6 py-3 bg-white text-[#525866] border border-lightGray rounded-full shadow dark:bg-black-500 dark:text-lightGray dark:border-[#2B303B]"
                     onClick={handleToggleNavBar}
                 >
                     Menu
@@ -39,7 +39,7 @@ function MobileNav() {
 
             <div
                 className={`fixed inset-x-0 transform ${showNavBar ? 'translate-y-0 bottom-0' : 'translate-y-full -bottom-4'
-                    } mx-4 mb-4 transition-transform duration-500 ease-in-out bg-white dark:bg-black-500 dark:border-[#2B303B] p-6 rounded-[30px] shadow-lg border-t-2 sm:rounded-xl sm:w-[90%]`}
+                    } mx-4 mb-4 transition-transform duration-500 ease-in-out bg-white dark:bg-black dark:border-[#2B303B] p-6 rounded-[30px] shadow-lg border-t-2 sm:rounded-xl sm:w-[90%]`}
             >
                 <div className="flex justify-end">
                     <button

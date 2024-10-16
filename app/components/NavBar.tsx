@@ -16,7 +16,7 @@ function NavBar() {
     if (!mounted) return null;
 
     return (
-        <div className='absolute hidden w-fit bottom-10 bg-white border border-[#E1E4EA] rounded-[32px] shadow-lg transition-colors ease-in duration-500 md:block dark:bg-black-500 dark:border-[#2B303B]'>
+        <div className='absolute hidden w-fit bottom-10 bg-white border border-[#E1E4EA] rounded-[32px] shadow-lg transition-colors ease-in duration-500 md:block dark:bg-black dark:border-[#2B303B]'>
             <ul className='flex p-[6px] text-sm text-darkGray dark:text-lightGray'>
                 <li className='size-fit px-6 py-3 rounded-full cursor-pointer transition-all duration-500 hover:bg-[#F5F7FA] dark:hover:bg-[#1E1E1E]'>
                     <Link href={"#"} className='flex items-center gap-2'>
