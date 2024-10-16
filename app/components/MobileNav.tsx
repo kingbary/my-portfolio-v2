@@ -27,7 +27,7 @@ function MobileNav() {
     };
 
     return (
-        <div className="fixed inset-0 flex justify-center items-end px-4 py-6 md:hidden">
+        <div className="absolute bottom-5 flex justify-center items-end px-4 py-6 md:hidden">
             {!showNavBar && (
                 <button
                     className="px-6 py-3 bg-white text-[#525866] border border-lightGray rounded-full shadow dark:bg-black-500 dark:text-lightGray dark:border-[#2B303B]"
