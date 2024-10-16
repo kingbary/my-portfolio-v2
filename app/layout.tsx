@@ -20,14 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${bricolageGrotesque.className} h-screen`}>
+      <body className={`${bricolageGrotesque.className} relative flex justify-center h-screen`}>
         <Providers>
-          <main className="relative flex justify-center bg-[#F5F5F5] dark:bg-[#1E1E1E] w-full h-full transition-all ease-in duration-700">
-            <MobileNav />
-            <SocialsLink />
-            <NavBar />
+          <main className="flex justify-center bg-[#F5F5F5] dark:bg-[#1E1E1E] w-full h-full overflow-scroll transition-all ease-in duration-700">
             {children}
           </main>
+          <NavBar />
+          <MobileNav />
+          <SocialsLink />
         </Providers>
       </body>
     </html>
