@@ -2,6 +2,7 @@
 import { Layers3Icon, Send, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { AiOutlineUser } from 'react-icons/ai';
 import { CiLinkedin } from 'react-icons/ci';
@@ -10,6 +11,11 @@ import { FiGithub } from 'react-icons/fi';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 function MobileNav() {
+    const pathname = usePathname();
+    function isActiveBar(path: string) {
+        return pathname === path;
+    }
+
     const [hovered, setHovered] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [showNavBar, setShowNavBar] = useState(false);
@@ -27,10 +33,10 @@ function MobileNav() {
     };
 
     return (
-        <div className="absolute bottom-5 flex justify-center items-end px-4 py-6 md:hidden">
+        <div className="absolute bottom-7 flex justify-center items-end px-4 py-6 md:hidden">
             {!showNavBar && (
                 <button
-                    className="px-6 py-3 bg-white text-[#525866] border border-lightGray rounded-full shadow dark:bg-black-500 dark:text-lightGray dark:border-[#2B303B]"
+                    className="px-6 py-3 bg-white text-[#525866] text-sm border border-lightGray rounded-full shadow dark:bg-black-500 dark:text-lightGray dark:border-[#2B303B]"
                     onClick={handleToggleNavBar}
                 >
                     Menu
@@ -51,13 +57,13 @@ function MobileNav() {
                 </div>
 
                 <ul className="flex flex-col gap-4 p-4 text-sm text-darkGray dark:text-lightGray">
-                    <li className="flex justify-center w-full px-6 py-3 rounded-full cursor-pointer transition-all duration-500 hover:bg-[#F5F7FA] dark:hover:bg-[#1E1E1E]">
-                        <Link href="#" className="flex items-center gap-2">
+                    <li className={`flex justify-center w-full px-6 py-3 rounded-full cursor-pointer transition-all duration-500 ${isActiveBar('/') ? 'bg-[#F5F7FA] dark:bg-[#1E1E1E]' : ''} hover:bg-[#F5F7FA] dark:hover:bg-[#1E1E1E]`}>
+                        <Link href="/" className="flex items-center gap-2">
                             <AiOutlineUser size={16} /> About
                         </Link>
                     </li>
-                    <li className="flex justify-center w-full px-6 py-3 rounded-full cursor-pointer transition-all duration-500 hover:bg-[#F5F7FA] dark:hover:bg-[#1E1E1E]">
-                        <Link href="#" className="flex items-center gap-2">
+                    <li className={`flex justify-center w-full px-6 py-3 rounded-full cursor-pointer transition-all duration-500 ${isActiveBar('/projects') ? 'bg-[#F5F7FA] dark:bg-[#1E1E1E]' : ''} hover:bg-[#F5F7FA] dark:hover:bg-[#1E1E1E]`}>
+                        <Link href="/projects" className="flex items-center gap-2">
                             <Layers3Icon size={16} /> Projects <sup>5</sup>
                         </Link>
                     </li>
