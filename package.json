@@ -2,11 +2,19 @@
   "name": "my-portfolio-v2",
   "version": "0.1.0",
   "private": true,
+  "author": "Kingsley Akwa <kingsleyakwa@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kingbary/my-portfolio-v2"
+  },
   "scripts": {
+    "predev": "pnpm run sanity-typegen",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sanity-typegen": "npx sanity schema extract --enforce-required-fields && npx sanity typegen generate"
   },
   "dependencies": {
     "@sanity/icons": "^3.4.0",
