@@ -1,6 +1,6 @@
-import AboutMeSection from "./components/AboutMeSection";
-import ExperienceSection from "./components/ExperienceSection";
-import SkillsSection from "./components/SkillsSection";
+import AboutMeSection from "../components/AboutMeSection";
+import ExperienceSection from "../components/ExperienceSection";
+import SkillsSection from "../components/SkillsSection";
 
 export default function Home() {
   return (

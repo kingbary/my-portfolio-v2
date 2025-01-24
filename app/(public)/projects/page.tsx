@@ -1,8 +1,15 @@
 
 import { Link as LinkIcon } from 'lucide-react'
+import { Metadata } from 'next';
 import Link from 'next/link'
 import React from 'react'
 import { FaCode } from 'react-icons/fa6'
+
+export const metadata: Metadata = {
+    title: "Kingsley Akwa | Projects",
+    description: "Hello! I'm Kingsley Akwa, a front-end web engineer crafting exceptional web experiences",
+};
+
 
 function Projects() {
     return (
