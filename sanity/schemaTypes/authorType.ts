@@ -10,12 +10,8 @@ export const authorType = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'slug',
-      type: 'slug',
-      options: {
-        source: 'name',
-        maxLength: 96,
-      },
+      name: 'role',
+      type: 'string',
     }),
     defineField({
       name: 'image',
