@@ -2,7 +2,7 @@
 
 ## Overview
 
-[Get real-time notifications per deliverables and achieve efficient communication with teammates and your deployed solutions.]
+A portfolio app built on NextJS, deploying contents with [Sanity](https://www.sanity.io/) CMS.
 
 ## Getting Started
 
