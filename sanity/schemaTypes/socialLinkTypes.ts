@@ -14,7 +14,7 @@ export const socialLinkSchma = defineType({
       type: "string",
     }),
     defineField({
-      name: "linkedInLink",
+      name: "linkedinLink",
       type: "string",
     }),
     defineField({

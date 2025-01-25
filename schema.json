@@ -404,7 +404,7 @@
         },
         "optional": true
       },
-      "linkedInLink": {
+      "linkedinLink": {
         "type": "objectAttribute",
         "value": {
           "type": "string"

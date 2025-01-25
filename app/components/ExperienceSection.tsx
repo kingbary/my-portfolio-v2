@@ -67,7 +67,7 @@ export default function ExperienceSection() {
                             className="px-6 py-3 bg-black-500 text-sm text-lightGray rounded-[20px] transition-[padding] duration-300 ease-linear hover:px-8 dark:text-black-500 dark:bg-lightGray"
                             onClick={handleShowMore}
                         >
-                            {!showMore ? (<>See More <sup>{experience.length}</sup></>) : "See Less"}
+                            {!showMore ? (<>See More <sup>{experience.length - 2}</sup></>) : "See Less"}
                         </button>
                     </div>
                 )}

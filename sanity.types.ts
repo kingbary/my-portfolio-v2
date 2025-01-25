@@ -82,7 +82,7 @@ export type SocialLinks = {
   _rev: string;
   email?: string;
   githubLink?: string;
-  linkedInLink?: string;
+  linkedinLink?: string;
   twitterLink?: string;
   sourceCodeLink?: string;
 };

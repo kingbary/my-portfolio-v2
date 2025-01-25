@@ -1,4 +1,5 @@
 "use client";
+import { SocialLinks } from '@/sanity.types';
 import { Layers3Icon, Send, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
@@ -10,7 +11,11 @@ import { FaCode } from 'react-icons/fa6';
 import { FiGithub } from 'react-icons/fi';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
-function MobileNav() {
+interface SocialLinksItems {
+    socialLinks: SocialLinks
+}
+
+function MobileNav({socialLinks}: SocialLinksItems) {
     const pathname = usePathname();
     function isActiveBar(path: string) {
         return pathname === path;
@@ -31,6 +36,8 @@ function MobileNav() {
     const handleToggleNavBar = () => {
         setShowNavBar((prevState) => !prevState);
     };
+
+    const email = socialLinks?.email ?? null;
 
     return (
         <div className="absolute bottom-10 w-full flex justify-center md:hidden">
@@ -72,9 +79,9 @@ function MobileNav() {
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
                     >
-                        <Link href="mailto:kingsleyakwa@gmail.com" className="flex items-center gap-2">
+                        <Link href={`mailto:${email}`} className="flex items-center gap-2">
                             <Send size={16} />
-                            {hovered ? 'kingsleyakwa@gmail.com' : 'Contact'}
+                            {hovered ? email : 'Contact'}
                         </Link>
                     </li>
                 </ul>

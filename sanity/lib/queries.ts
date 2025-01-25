@@ -18,5 +18,5 @@ export const fetchExperience = () =>
 
 export const fetchSocialLink = () =>
   loadQuery<SocialLinks[]>({
-    query: `*[_type == "socialLinkSchma"]`,
+    query: `*[_type == "socialLinks"]`,
   });
