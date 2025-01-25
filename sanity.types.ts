@@ -74,6 +74,50 @@ export type Slug = {
   source?: string;
 };
 
+export type SocialLinks = {
+  _id: string;
+  _type: "socialLinks";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  email?: string;
+  githubLink?: string;
+  linkedInLink?: string;
+  twitterLink?: string;
+  sourceCodeLink?: string;
+};
+
+export type Experience = {
+  _id: string;
+  _type: "experience";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  role?: string;
+  company?: string;
+  companyLocation?: string;
+  startDate?: string;
+  endDate?: string;
+  workExecuted?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+};
+
 export type Technologies = {
   _id: string;
   _type: "technologies";
@@ -180,5 +224,5 @@ export type SanityImageMetadata = {
   isOpaque?: boolean;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Slug | Technologies | Author | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Slug | SocialLinks | Experience | Technologies | Author | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
 export declare const internalGroqTypeReferenceTo: unique symbol;
