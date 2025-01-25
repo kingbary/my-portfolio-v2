@@ -74,6 +74,15 @@ export type Slug = {
   source?: string;
 };
 
+export type Technologies = {
+  _id: string;
+  _type: "technologies";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  technology?: string;
+};
+
 export type Author = {
   _id: string;
   _type: "author";
@@ -171,5 +180,5 @@ export type SanityImageMetadata = {
   isOpaque?: boolean;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Slug | Author | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Slug | Technologies | Author | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
 export declare const internalGroqTypeReferenceTo: unique symbol;
