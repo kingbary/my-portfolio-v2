@@ -17,8 +17,8 @@ const customPortableText: Partial<PortableTextReactComponents> = {
         unstyled: ({ children }) => children,
     },
     list: {
-        bullet: ({ children }) => <ul className="list-disc pl-5 my-4">{children}</ul>,
-        number: ({ children }) => <ol className="list-decimal pl-5 my-4">{children}</ol>,
+        bullet: ({ children }) => <ul className="list-disc my-4 text-sm">{children}</ul>,
+        number: ({ children }) => <ol className="list-decimal my-4 text-sm">{children}</ol>,
     },
     listItem: ({ children }) => <li className="mb-2">{children}</li>,
     marks: {
