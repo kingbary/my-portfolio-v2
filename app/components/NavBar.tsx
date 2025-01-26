@@ -7,8 +7,13 @@ import { AiOutlineUser } from 'react-icons/ai';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
+import { SocialLinks } from '@/sanity.types';
 
-function NavBar() {
+interface SocialLinksItems {
+    socialLinks: SocialLinks
+}
+
+function NavBar({ socialLinks }: SocialLinksItems) {
     const pathname = usePathname();
     function isActiveBar(path: string) {
         return pathname === path;
@@ -21,6 +26,7 @@ function NavBar() {
     useEffect(() => { setMounted(true) }, [])
     if (!mounted) return null;
 
+    const email = socialLinks?.email ?? null;
 
     return (
         <div className='absolute bottom-10 hidden w-full md:flex justify-center'>
@@ -44,9 +50,9 @@ function NavBar() {
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
                     >
-                        <Link href={"mailto:kingsleyakwa@gmail.com"} className='flex items-center gap-2 transition-[max-width] max-w-fit duration-500'>
+                        <Link href={`mailto:${email}`} className='flex items-center gap-2 transition-[max-width] max-w-fit duration-500'>
                             <Send size={16} />
-                            {hovered ? 'kingsleyakwa@gmail.com' : 'Contact'}
+                            {hovered ? email : 'Contact'}
                         </Link>
                     </li>
                     <li className='size-12 flex items-center justify-center p-3 rounded-full cursor-pointer hover:bg-[#F5F7FA] transition-all ease-in duration-1000 dark:hover:bg-[#1E1E1E]'>

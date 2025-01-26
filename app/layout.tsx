@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
-import SocialsLink from "./components/SocialsLink";
-import NavBar from "./components/NavBar";
-import Providers from "./providers/ThemeProvider";
-import MobileNav from "./components/MobileNav";
 
 const bricolageGrotesque = Bricolage_Grotesque({ weight: ["200", "300", "400", "500", "600", "700", "800"], subsets: ["latin"] })
 
@@ -20,17 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${bricolageGrotesque.className} relative h-screen flex justify-center`}>
-        <main className="w-full h-full">
-          <Providers>
-            <div className="flex justify-center h-full text-[#525866] bg-[#F5F5F5] w-full overflow-scroll transition-all ease-in duration-700 dark:text-lightGray dark:bg-black-500">
-              {children}
-            </div>
-              <NavBar />
-              <MobileNav />
-            <SocialsLink />
-          </Providers>
-        </main>
+      <body className={`${bricolageGrotesque.className} relative h-screen`}>
+        {children}
       </body>
     </html>
   );
