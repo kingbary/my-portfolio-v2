@@ -9,7 +9,7 @@ export default async function ExperienceSection() {
 
     return (
         <section className="flex flex-col mt-6 border-t border-darkGray dark:border-lightGray">
-            <h3 className="text-sm mt-6 font-semibold md:text-xl">EXPERIENCE</h3>
+            <h3 className="pl-4 md:pl-0 text-lg mt-6 font-semibold md:text-xl">EXPERIENCE</h3>
             <ExperienceList experiences={sortedExperiences} />
         </section>
     )

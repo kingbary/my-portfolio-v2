@@ -15,19 +15,25 @@ export default function ExperienceList({ experiences }: { experiences: Experienc
 
     return (
         <>
-            <div className="transition-all duration-300 ease-in-out">
+            <div className="px-4 md:px-0 transition-all duration-300 ease-in-out">
                 {displayedExperiences.map((item) => (
                     <div
                         className="flex py-6 gap-6 border-b border-darkGray dark:border-lightGray"
                         key={item._id}
                     >
-                        <small className="text-nowrap">
+                        <small className="text-nowrap hidden md:block">
                             {item.startDate ? formatDate(item.startDate) : "Unknown"} -{" "}
                             {item.endDate ? formatDate(item.endDate) : "Present"}
                         </small>
                         <div>
                             <div className="mb-4">
-                                <h4 className="text- font-medium md:text-xl">{item.role}</h4>
+                                <div className="flex justify-between">
+                                    <h4 className="text- font-medium md:text-xl">{item.role}</h4>
+                                    <small className="text-nowrap md:hidden">
+                                        {item.startDate ? formatDate(item.startDate) : "Unknown"} -{" "}
+                                        {item.endDate ? formatDate(item.endDate) : "Present"}
+                                    </small>
+                                </div>
                                 <h5 className="text-xs italic md:text-sm">{item.company} • {item.companyLocation}</h5>
                             </div>
                             {item.workExecuted && (

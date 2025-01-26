@@ -40,7 +40,7 @@ function MobileNav({socialLinks}: SocialLinksItems) {
     const email = socialLinks?.email ?? null;
 
     return (
-        <div className="absolute bottom-10 w-full flex justify-center md:hidden">
+        <div className="absolute bottom-20 w-full flex justify-center md:hidden">
             {!showNavBar && (
                 <button
                     className="px-6 py-3 bg-white text-[#525866] text-sm border border-lightGray rounded-full shadow dark:bg-black-500 dark:text-lightGray dark:border-[#2B303B]"

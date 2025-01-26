@@ -32,7 +32,7 @@ export default async function Home() {
           />
         </picture>
         <div>
-          <h2 className="text-2xl text-black-500 dark:text-white font-bold md:text-[40px]">{authorName}</h2>
+          <h1 className="text-2xl text-black-500 dark:text-white font-bold md:text-[40px]">{authorName}</h1>
           <p className="text-sm font-medium leading-5 mt-1 md:text-xl">{authorRole}</p>
         </div>
       </div>
