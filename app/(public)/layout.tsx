@@ -16,7 +16,7 @@ async function layout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <main className="w-full h-full">
             <Providers>
-                <div className="flex justify-center h-full text-[#525866] bg-[#F5F5F5] w-full overflow-scroll transition-all ease-in duration-700 dark:text-lightGray dark:bg-black-500">
+                <div className="flex justify-center h-full w-full text-[#525866] bg-[#F5F5F5] overflow-y-scroll transition-all ease-in duration-700 dark:text-lightGray dark:bg-black-500">
                     {children}
                 </div>
                 <NavBar socialLinks={socialLinks.data[0]} />
