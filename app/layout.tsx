@@ -8,8 +8,6 @@ const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"]
 });
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-XXXXXXX";
-
 export const metadata: Metadata = {
   title: "Kingsley Akwa",
   description: "Hello! I'm Kingsley Akwa, a front-end web engineer crafting exceptional web experiences",
@@ -25,7 +23,7 @@ export default function RootLayout({
       <head>
         {/* Google Analytics */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-FT31LXY8R2`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -33,7 +31,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('config', 'G-FT31LXY8R2');
           `}
         </Script>
         {/* Google Tag Manager */}
