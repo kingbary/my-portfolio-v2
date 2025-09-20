@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+Allow: /projects
+Allow: /sitemap.xml
+
+# Protect sensitive areas
+Disallow: /admin/
+
+# Crawl delays to prevent server overload
+Crawl-delay: 10
+
+# XML Sitemap
+Sitemap: https://https://kingsleyakwa.tech/sitemap.xml
+
+# Block AI training bots (optional)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
