@@ -5,6 +5,38 @@ import SkillsSection from "../components/SkillsSection";
 import { fetchAuthor } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kingsley Akwa | Frontend Engineer",
+  description:
+    "Frontend Engineer specializing in building interactive web applications and data-driven dashboards",
+  openGraph: {
+    title: "Kingsley Akwa | Frontend Engineer",
+    description:
+      "Frontend Engineer specializing in building interactive web applications and data-driven dashboards",
+    url: "https://kingsleyakwa.tech/",
+    siteName: "Kingsley Akwa",
+    images: [
+      {
+        url: "https://kingsleyakwa.tech/images/headshot.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Cinnamon",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kingsley Akwa | Frontend Engineer",
+    description:
+      "Kingsley Akwa builds global visibility for visionary brands and professionals through PR services, media placements, and strategic storytelling.",
+    images: ["https://kingsleyakwa.tech/images/headshot.jpg"],
+    site: "@kingsley_akwa",
+  },
+};
 
 export default async function Home() {
   let author: { data: Author[] } = { data: [] };

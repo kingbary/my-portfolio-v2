@@ -12,7 +12,33 @@ import { FaCode } from 'react-icons/fa6'
 
 export const metadata: Metadata = {
     title: "Kingsley Akwa | Projects",
-    description: "Hello! I'm Kingsley Akwa, a front-end web engineer crafting exceptional web experiences",
+    description:
+        "Showcasing a collection of frontend projects, including interactive web applications and data-driven dashboards",
+    openGraph: {
+        title: "Kingsley Akwa | Projects",
+        description:
+            "Explore Kingsley Akwa's portfolio of frontend projects: web apps and dashboards",
+        url: "https://kingsleyakwa.tech/projects",
+        siteName: "Kingsley Akwa",
+        images: [
+            {
+                url: "https://kingsleyakwa.tech/images/project-img.png",
+                width: 1200,
+                height: 630,
+                alt: "Kingsley Akwa Projects",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Kingsley Akwa | Projects",
+        description:
+            "Discover Kingsley Akwa's work in frontend engineering: interactive web apps, dashboards, and advertising platforms with video and analytics.",
+        images: ["https://kingsleyakwa.tech/images/project-img.png"],
+        site: "@kingsley_akwa",
+    },
 };
 
 let projects: { data: Projects[] } = { data: [] };
